@@ -1,6 +1,6 @@
 import axios from "axios";
 
-const BASE_URL = "http://localhost:3000";
+const BASE_URL = import.meta.env.VITE_API_URL;
 export const WISHLIST_CHANGE_EVENT = "shopkart:wishlist-change";
 export const CART_EVENT = "shopkart:cart-change";
 
