@@ -18,10 +18,14 @@ const app = express();
 
 // ── Middleware ────────────────────────────────────────────────────────────────
 app.use(
-  cors({
-    origin: ["http://localhost:5173", "http://127.0.0.1:5173"],
-    credentials: true,               // allow the browser to send/receive cookies
-  })
+cors({
+origin: [
+"http://localhost:5173",
+"http://127.0.0.1:5173",
+"https://shopkart-53rz.onrender.com"
+],
+credentials: true,
+})
 );
 app.use(express.json());          // parse JSON request bodies
 app.use(express.urlencoded({ extended: true })); // parse form data
